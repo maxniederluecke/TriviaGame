@@ -1,7 +1,7 @@
 
 var correctAnswers = 0;
 var incorrectAnswers = 0;
-var time = 30;
+var time = 45;
 var intervalId;
 
 function run() {
@@ -10,7 +10,7 @@ function run() {
 
 function decrement() {
     time--;
-    $("#time").html("Time Remaining: " + time);
+    $("#time").html("Time Remaining: " + time + " Seconds");
     console.log(time);
     if (time === 0) {
     stop();
@@ -19,7 +19,7 @@ function decrement() {
     };
 };
 function stop() {
-    clearInterval(intervalId);
+    clearInterval(intervalId)
 };
 
 function calcAnswers() {
@@ -47,12 +47,14 @@ function calcAnswers() {
 	var selectedFive = $("input[type='radio'][name='q5']:checked");
 	if (selectedFive.length > 0) {
 	    selectedValFive = selectedFive.val();
-	if (selectedOne = 1) {
+	   	};
+
+	if (selectedOne = 2) {
 		correctAnswers++;
 	} else {
 		incorrectAnswers++;
 	};
-	if (selectedTwo = 2) {
+	if (selectedTwo = 1) {
 		correctAnswers++;
 	} else {
 		incorrectAnswers++;
@@ -62,21 +64,23 @@ function calcAnswers() {
 	} else {
 		incorrectAnswers++;
 	};
-	if (selectedFour = 2) {
+	if (selectedFour = 3) {
 		correctAnswers++;
 	} else {
 		incorrectAnswers++;
 	};
-	if (selectedFive = 3) {
+	if (selectedFive = 1) {
 		correctAnswers++;
 	} else {
 		incorrectAnswers++;
 	};
 
-	};
+
 };
 
 run();
+
+console.log($("input[type='radio'][name='q1']:checked"))
 
 
 
